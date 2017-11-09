@@ -28,13 +28,19 @@ The full screen map uses Google Maps API written in map.js file.
 4. Store the content data from third party APIs into marker object. Add another click listener on marker for it to open an info window with content data. 
 
 * **Filter the List and Markers:** The list view and the markers should update accordingly in real time after submitting input field. 
-Create a function object "filterLocation" in ViewModel. Inside the function, it filters list items by removing all data in the location observable array and add the marker that matches input location into the obserbala array. The list of item names is the title of each marker. To filter markers, it passes null value to the setMap method of each marker, then passes map object into setMap method if the marker matches input location. 
+1. Create an observable called inputLocation and bind it to the text input field of the form in html.
+2. Filter List : Create a function object "filterLocation" in ViewModel and bind it to form. Inside the function, it filters list items by removing all data in the location observable array and add the marker that matches input location into the obserbala array. The list of item names is the title of each marker. 
+3. Filter markers: It passes null value to the setMap method of each marker, then passes map object into setMap method if the marker matches input location. 
+
+* **Animate a Marker:**
+1. When list item associated with the marker clicked: Create a function object called openInfo inside ViewModel and bind the function oject onto list item.
+2. When the map marker itself is selected: Inside the createMapMarker function, add a click listener on marker. If the return value from marker's getAnimation method is null , pass bounce parameter to setAnimation method of marker, and if the return is not null, then pass null to setAnimation method. 
+
+* **Open an infoWindow:**
+Info window will open when either a location is selected from the list view or its map marker is selected directly. Similar to animating map marker, the data binding of openInfo onto list item will open info window clicking on the item. The marker is added a click listener where an infoWindow object will call setContent by passing content data extracted from APIs and then call open method. 
 
 
-
-* Use third-party APIs to provide information when a map marker or list view entry is clicked. Please provide attribution to the data sources/APIs you use. For example if you are using Foursquare, indicate somewhere in your interface and in your README that you used Foursquare's API.
-
-* Animate a map marker when either the list item associated with it or the map marker itself is selected.
-
-* Open an infoWindow with the information when either a location is selected from the list view or its map marker is selected directly.
-
+## References
+1. Foursquare API : https://api.foursquare.com/v2/venues/explore
+2. Googlemap API : http://maps.googleapis.com/maps/api/js
+3. Flickr API : https://api.flickr.com/services/rest/?method=flickr.photos.search
