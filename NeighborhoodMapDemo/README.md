@@ -39,7 +39,7 @@ The full screen map uses Google Maps API written in map.js file.
 * **Open an infoWindow:**
 Info window will open when either a location is selected from the list view or its map marker is selected directly. 
 1. List Item: Similar to animating map marker, the data binding of openInfo onto list item will open info window when clicking on the item. 
-2. The marker is added a click listener where an infoWindow object will call setContent by passing content data extracted from APIs and then call open method. 
+2. Marker: The marker is added a click listener where an infoWindow object will call setContent by passing content data extracted from APIs and then call open method. 
 
 
 ## References
