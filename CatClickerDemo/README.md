@@ -4,9 +4,7 @@ CatClicker is a client side and interactive single page web application which us
 It uses vanilla JavaScript such as event listeners and DOM manipulation to process and store user input and subsequently display new content to the user. 
 
 ## Challenges:
-1. The user input from the form cannot update page content. For example, the admin feature could not change the cat name, image source or number 
-of clicks. When clicking save button, the page will refresh to the default page. 
-2. New content cannot remain retrievable/viewable after a screen refresh. The page will reset to the default content. 
+The admin feature could not change the cat name, image source or number because there is database to persist the user input data. When page refreshes, user input data are lost.
 
 ## Implementatioin:
 * Model view controller:
