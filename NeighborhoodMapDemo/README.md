@@ -1,13 +1,13 @@
 # Neighborhood-Map
-NeighborhoodMap is an interactive client-side web app that pulls data from external APIs, and refreshes the page with AJAX requests. The app uses MVC architecture built with knock-out framework, HTML and Javascript. It uses jQuery to handle events.
+Neighborhood-Map is an interactive client-side web app that pulls data from external APIs, and refreshes the page with AJAX requests. The app uses MVC architecture built with knock-out framework, HTML and Javascript. It uses jQuery to handle events.
 
 ## Overview 
-User can search for a place from a list of places and explore them on a Google map. User can click the marker to see information about the place. 
+User can search for a place from a list of places and explore its location on a Google map. User can click the marker to see information about the place. 
 
 **Functionality**:
 * A list view displays all places shown on map and user can filter the list by inputting text.
 * A google map displays the markers of places filtered and user can open an info window by clicking the marker.
-* The info window display information from third party APIs.
+* The info window display information requested from third party APIs.
 * Selecting a place in the list view or clicking on marker will animate the marker by bouncing. 
 * When there is an error retrieving information from APIs, a error message will display to users.
 
